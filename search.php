@@ -37,7 +37,7 @@ $sites = [
             <button id="searchBtn" type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">Ara</button>
         </form>
         
-        <p class="text-sm mt-2">Bu Araç yalnızca seçilen sayfada arama sorgusunda bulunmanızı sağlayan bir link oluşturup yeni sekmede açmaktadır. Oluşturulan linklerin açılması sonucu oluşabilecek sorunlardan ilgili sayfa sorumludur.</p>
+        <p class="text-sm mt-2">Bu Araç yalnızca seçilen sayfada arama sorgusunda bulunmanızı sağlayan bir link oluşturup yeni sekmede açmaktadır. Oluşturulan linklerin açılması sonucu meydana gelecek sorunlardan sorumlu değildir. Araç, kod enjeksiyonu yapmamaktadır.</p>
     </div>
     <script>
 
