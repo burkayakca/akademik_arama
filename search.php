@@ -1,0 +1,67 @@
+<?php 
+
+$sites = [
+    "TDV Islam Ansiklopedisi" => "https://islamansiklopedisi.org.tr/arama/?q=",
+    "JSTOR"=> "https://www.jstor.org/action/doBasicSearch?Query=",
+    "Belleten" => "https://belleten.gov.tr/arama-sonuclari?quick=",
+    "DergiPark" => "https://dergipark.org.tr/tr/search?q=",
+    "Google Scholar" => "https://scholar.google.com/scholar?q=",
+    "Internet Archive"=> "https://archive.org/search?query=",
+];
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Search</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Akademik Arama</h2>
+        <?php 
+        echo "<form id='searchForm' name='searchForm' method='post' class='space-y-6'>"
+        ?>  
+            <label for="search_query" class="block text-gray-700 font-semibold mb-1">Arama Terimi:</label>
+            <input type="text" name="search_query" id="search_query" class="w-full p-1 bg-gray border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"><br>
+            <label for="select_site" class="block text-gray-700 font-semibold mb-1">Websitesi seçin:</label>
+            <select name="select_site" id="select_site" class="w-full p-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <?php foreach ($sites as $key => $value) {
+                    echo "<option value='$value'>$key</option>";
+                }
+                ?>
+            </select>
+            <button id="searchBtn" type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">Ara</button>
+        </form>
+        
+        <p class="text-sm mt-2">Bu Araç yalnızca seçilen sayfada arama sorgusunda bulunmanızı sağlayan bir link oluşturup yeni sekmede açmaktadır. Oluşturulan linklerin açılması sonucu oluşabilecek sorunlardan ilgili sayfa sorumludur.</p>
+    </div>
+    <script>
+
+        function runSearch () {
+            const sites = <?php echo json_encode(value: $sites); ?>;
+            let link = ""
+            const search_query = document.getElementById('search_query').value
+            const selected_site = document.getElementById('select_site')
+            const selectedValue = selected_site.value;
+            if (search_query) { 
+                link =  selectedValue + search_query
+                window.open(link,'_blank').focus();
+            } else {
+                alert("Aranacak terim kısmı boş olamaz");
+            }
+        }
+            
+        document.getElementById('searchBtn').addEventListener('click', runSearch);
+        document.getElementById("search_query").addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+                runSearch();
+            }
+        });
+    </script>
+</body>
+</html>
