@@ -23,8 +23,7 @@ jobs:
 
       - name: HTML üret
         run: |
-          mkdir -p dist
-          php src/search.php > dist/index.html
+          php search.php > dist/index.html
 
       - name: GH Pages branch'ine gönder
         uses: peaceiris/actions-gh-pages@v4
