@@ -2,9 +2,11 @@
 
 $sites = [
     "TDV Islam Ansiklopedisi" => "https://islamansiklopedisi.org.tr/arama/?q=",
-    "JSTOR"=> "https://www.jstor.org/action/doBasicSearch?Query=",
-    "Belleten" => "https://belleten.gov.tr/arama-sonuclari?quick=",
     "DergiPark" => "https://dergipark.org.tr/tr/search?q=",
+    "Belleten" => "https://belleten.gov.tr/arama-sonuclari?quick=",
+    "İstanbul Ansiklopedisi" => "https://istanbulansiklopedisi.org/simple-search?location=&query=",
+    "Britannica" => "https://www.britannica.com/search?query=",
+    "JSTOR"=> "https://www.jstor.org/action/doBasicSearch?Query=",
     "Google Scholar" => "https://scholar.google.com/scholar?q=",
     "Internet Archive"=> "https://archive.org/search?query=",
 ];
@@ -17,7 +19,7 @@ $sites = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Search</title>
+    <title>Akademik Arama</title>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
         <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
@@ -25,10 +27,10 @@ $sites = [
         <?php 
         echo "<form id='searchForm' name='searchForm' method='post' class='space-y-6'>"
         ?>  
-            <label for="search_query" class="block text-gray-700 font-semibold mb-1">Arama Terimi:</label>
-            <input type="text" name="search_query" id="search_query" class="w-full p-1 bg-gray border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"><br>
-            <label for="select_site" class="block text-gray-700 font-semibold mb-1">Websitesi seçin:</label>
-            <select name="select_site" id="select_site" class="w-full p-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <label for="search_query" class="block text-gray-700 font-semibold ">Aranacak Terim:</label>
+            <input type="text" name="search_query" id="search_query" class="w-full p-1 bg-gray border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"><br>
+            <label for="select_site" class="block text-gray-700 font-semibold ">Aratılacağı Sayfa:</label>
+            <select name="select_site" id="select_site" class="w-full p-1 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <?php foreach ($sites as $key => $value) {
                     echo "<option value='$value'>$key</option>";
                 }
