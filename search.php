@@ -2,6 +2,7 @@
 
 $sites = [
     "TDV Islam Ansiklopedisi" => "https://islamansiklopedisi.org.tr/arama/?q=",
+    "TR Dizin" => "https://search.trdizin.gov.tr/tr/yayin/ara?q=",
     "DergiPark" => "https://dergipark.org.tr/tr/search?q=",
     "Belleten" => "https://belleten.gov.tr/arama-sonuclari?quick=",
     "İstanbul Ansiklopedisi" => "https://istanbulansiklopedisi.org/simple-search?location=&query=",
