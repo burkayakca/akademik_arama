@@ -14,7 +14,7 @@
             <input type="text" name="search_query" id="search_query" class="w-full p-1 bg-gray border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"><br>
             <label for="select_site" class="block text-gray-700 font-semibold ">Aratılacağı Sayfa:</label>
             <select name="select_site" id="select_site" class="w-full p-1 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <option value='https://islamansiklopedisi.org.tr/arama/?q='>TDV Islam Ansiklopedisi</option><option value='https://dergipark.org.tr/tr/search?q='>DergiPark</option><option value='https://belleten.gov.tr/arama-sonuclari?quick='>Belleten</option><option value='https://istanbulansiklopedisi.org/simple-search?location=&query='>İstanbul Ansiklopedisi</option><option value='https://www.britannica.com/search?query='>Britannica</option><option value='https://www.jstor.org/action/doBasicSearch?Query='>JSTOR</option><option value='https://scholar.google.com/scholar?q='>Google Scholar</option><option value='https://archive.org/search?query='>Internet Archive</option>            </select>
+                <option value='https://islamansiklopedisi.org.tr/arama/?q='>TDV Islam Ansiklopedisi</option><option value='https://search.trdizin.gov.tr/tr/yayin/ara?q='>TR Dizin</option><option value='https://dergipark.org.tr/tr/search?q='>DergiPark</option><option value='https://belleten.gov.tr/arama-sonuclari?quick='>Belleten</option><option value='https://istanbulansiklopedisi.org/simple-search?location=&query='>İstanbul Ansiklopedisi</option><option value='https://www.britannica.com/search?query='>Britannica</option><option value='https://www.jstor.org/action/doBasicSearch?Query='>JSTOR</option><option value='https://scholar.google.com/scholar?q='>Google Scholar</option><option value='https://archive.org/search?query='>Internet Archive</option>            </select>
             <button id="searchBtn" type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">Ara</button>
         </form>
         
@@ -23,7 +23,7 @@
     <script>
 
         function runSearch () {
-            const sites = {"TDV Islam Ansiklopedisi":"https:\/\/islamansiklopedisi.org.tr\/arama\/?q=","DergiPark":"https:\/\/dergipark.org.tr\/tr\/search?q=","Belleten":"https:\/\/belleten.gov.tr\/arama-sonuclari?quick=","\u0130stanbul Ansiklopedisi":"https:\/\/istanbulansiklopedisi.org\/simple-search?location=&query=","Britannica":"https:\/\/www.britannica.com\/search?query=","JSTOR":"https:\/\/www.jstor.org\/action\/doBasicSearch?Query=","Google Scholar":"https:\/\/scholar.google.com\/scholar?q=","Internet Archive":"https:\/\/archive.org\/search?query="};
+            const sites = {"TDV Islam Ansiklopedisi":"https:\/\/islamansiklopedisi.org.tr\/arama\/?q=","TR Dizin":"https:\/\/search.trdizin.gov.tr\/tr\/yayin\/ara?q=","DergiPark":"https:\/\/dergipark.org.tr\/tr\/search?q=","Belleten":"https:\/\/belleten.gov.tr\/arama-sonuclari?quick=","\u0130stanbul Ansiklopedisi":"https:\/\/istanbulansiklopedisi.org\/simple-search?location=&query=","Britannica":"https:\/\/www.britannica.com\/search?query=","JSTOR":"https:\/\/www.jstor.org\/action\/doBasicSearch?Query=","Google Scholar":"https:\/\/scholar.google.com\/scholar?q=","Internet Archive":"https:\/\/archive.org\/search?query="};
             let link = ""
             const search_query = document.getElementById('search_query').value
             const selected_site = document.getElementById('select_site')
