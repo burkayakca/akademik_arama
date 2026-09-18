@@ -5,6 +5,7 @@ $sites = [
     "TR Dizin" => "https://search.trdizin.gov.tr/tr/yayin/ara?q=",
     "DergiPark" => "https://dergipark.org.tr/tr/search?q=",
     "Belleten" => "https://belleten.gov.tr/arama-sonuclari?quick=",
+    "Tez Ara" => "https://tezara.org/search?q=",
     "İstanbul Ansiklopedisi" => "https://istanbulansiklopedisi.org/simple-search?location=&query=",
     "Britannica" => "https://www.britannica.com/search?query=",
     "JSTOR"=> "https://www.jstor.org/action/doBasicSearch?Query=",
